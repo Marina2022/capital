@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className={s.hero}>
+    <section className={s.hero}>
       <div className={s.heroGradient}></div>
       <div className={s.bottomGradient}></div>
       <div className={s.heroContainer}>
@@ -14,14 +14,12 @@ const Hero = () => {
             the top 5% of founders with capital and embedded operational support, driving 3x faster growth through
             hands-on execution.
           </p>
-
           <div className={s.links}>
             <Link href="/contacts">Pitch your startup</Link>
             <Link href="/portfolio">Portfolio</Link>
           </div>
         </div>
       </div>
-
       <div className={s.bottomPart}>
         <div className="container">
           <div className={s.companies}>
@@ -31,13 +29,10 @@ const Hero = () => {
             <img src="/img/hero-companies/comp4.svg" alt=""/>
             <img src="/img/hero-companies/comp5.svg" alt=""/>
             <img src="/img/hero-companies/comp6.svg" alt=""/>
-
           </div>
         </div>
       </div>
-
-
-    </div>
+    </section>
   )
     ;
 };

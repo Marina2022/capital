@@ -35,10 +35,8 @@ a {
 
 .container {
   width: 100%;
-  //max-width: 1298px;
   max-width: 1640px;
   margin: 0 auto;
-  //border: aquamarine 1px dashed;
 
   @include xl {
     max-width: 1298px;
@@ -53,5 +51,12 @@ a {
   }
 }
 
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
 

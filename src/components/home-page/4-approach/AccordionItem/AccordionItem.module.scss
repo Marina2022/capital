@@ -1,0 +1,66 @@
+.accordionItem {
+  padding: 44px;
+  border-radius: 20px;
+  border: #e1e1e1 1px solid;
+}
+
+.header {
+  cursor: pointer;
+  //padding: 16px 0;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  transition: transform .26s ease;
+  margin-left: auto;
+}
+
+/* поворот стрелки при открытии */
+.isOpen .icon {
+  transform: rotate(90deg);
+}
+
+/* контейнер для плавного открытия */
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .26s ease;
+  overflow: hidden;
+}
+
+.open {
+  grid-template-rows: 1fr;
+}
+
+.text {
+  overflow: hidden;       /* не даём вылезать тексту */
+  line-height: 1.4;
+  width: 50%;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.numberWrapper {
+  width: 106px;
+  flex-shrink: 0;
+}
+
+.itemNumber {
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 70px;
+  border-bottom: var(--title-color) 1px solid;
+  padding-bottom: 3px;
+}
+
+.itemTitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 360px;
+  flex-shrink: 0;
+}

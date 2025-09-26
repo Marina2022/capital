@@ -37,7 +37,6 @@
   position: relative;
   z-index: 1;
   padding-top: 95px;
-  //border: 1px solid red;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,6 +49,16 @@
   font-weight: 300;
   line-height: 103px;
   max-width: 673px;
+
+  @include t {
+    font-size: 56px;
+    line-height: 150%;
+  }
+
+  @include m {
+    font-size: 36px;
+    line-height: 150%;
+  }
 }
 
 .text {
@@ -72,6 +81,10 @@
   left: 0;
   color: white;
   background: black;
+
+  @include lg {
+    display: none;
+  }
 }
 
 .bottomGradient {
@@ -85,27 +98,9 @@
 }
 
 .heroContainer {
-  //width: 100%;
-  //max-width: 1298px;
-  //margin: 0 auto;
-  ////border: aquamarine 1px dashed;
-  //height: 100%;
-  //
-  //
-  //@include lg {
-  //  max-width: 960px;
-  //}
-  //
-  //@include t {
-  //  padding: 0 20px;
-  //}
-  //
-
   width: 100%;
-  //max-width: 1298px;
   max-width: 1640px;
   margin: 0 auto;
-  //border: aquamarine 1px dashed;
   height: 100%;
 
   @include xl {
@@ -119,7 +114,6 @@
   @include t {
     padding: 0 20px;
   }
-
 }
 
 
@@ -131,7 +125,6 @@
   justify-content: flex-end;
   gap: 25px;
   color: white;
-
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -143,5 +136,12 @@
     border-bottom: 1px solid white;
     padding-bottom: 3px;
   }
+}
 
+
+.companies {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

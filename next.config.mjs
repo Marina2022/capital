@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    nextScriptWorkers: false,
-    showDevOverlay: false,
-  },
+  devIndicators: false
 };
 
 export default nextConfig;

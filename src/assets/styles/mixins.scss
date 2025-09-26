@@ -1,5 +1,5 @@
 @mixin m {
-  @media (max-width: 536px) {
+  @media (max-width: 668px) {
     @content;
   }
 }
@@ -22,11 +22,5 @@
   }
 }
 
-.companies {
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 
