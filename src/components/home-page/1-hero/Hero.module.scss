@@ -1,0 +1,147 @@
+@use '@/assets/styles/mixins' as *;
+
+.hero {
+  background: rgba(0, 0, 0, 1) url('/img/leo-bg.webp') no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: calc(100vh - 60px);
+  width: 100%;
+  position: relative;
+
+  @include lg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  @include t {
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+.heroGradient {
+  background: linear-gradient(90.00deg, rgba(0, 0, 0, 1) 23%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66%;
+  height: 100%;
+
+  @include t {
+    width: 66%;
+    height: 70vh;
+  }
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
+  padding-top: 95px;
+  //border: 1px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mainTitle {
+  color: #fff;
+  font-size: 86px;
+  font-weight: 300;
+  line-height: 103px;
+  max-width: 673px;
+}
+
+.text {
+  margin-top: auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 512px;
+
+  padding-bottom: 130px;
+
+}
+
+.bottomPart {
+  height: 90px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: black;
+}
+
+.bottomGradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 23%, rgba(0, 0, 0, 0) 100%);
+  height: 259px;
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  z-index: 2;
+}
+
+.heroContainer {
+  //width: 100%;
+  //max-width: 1298px;
+  //margin: 0 auto;
+  ////border: aquamarine 1px dashed;
+  //height: 100%;
+  //
+  //
+  //@include lg {
+  //  max-width: 960px;
+  //}
+  //
+  //@include t {
+  //  padding: 0 20px;
+  //}
+  //
+
+  width: 100%;
+  //max-width: 1298px;
+  max-width: 1640px;
+  margin: 0 auto;
+  //border: aquamarine 1px dashed;
+  height: 100%;
+
+  @include xl {
+    max-width: 1298px;
+  }
+
+  @include lg {
+    max-width: 960px;
+  }
+
+  @include t {
+    padding: 0 20px;
+  }
+
+}
+
+
+.links {
+  position: absolute;
+  top: 365px;
+  right: 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 25px;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: .06em;
+  text-align: left;
+  text-transform: uppercase;
+
+  a {
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+  }
+
+}

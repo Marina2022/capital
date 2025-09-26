@@ -1,0 +1,32 @@
+@mixin m {
+  @media (max-width: 536px) {
+    @content;
+  }
+}
+
+@mixin t {
+  @media (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1320px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1746px) {
+    @content;
+  }
+}
+
+.companies {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+

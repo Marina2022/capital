@@ -1,0 +1,45 @@
+import s from './Hero.module.scss';
+import Link from "next/link";
+
+const Hero = () => {
+  return (
+    <div className={s.hero}>
+      <div className={s.heroGradient}></div>
+      <div className={s.bottomGradient}></div>
+      <div className={s.heroContainer}>
+        <div className={s.mainContent}>
+          <h1 className={s.mainTitle}>Empowering the next generation of startups</h1>
+          <p className={s.text}>
+            Lionshare Ventures is Southeast Asia’s premier selective venture builder. We back only
+            the top 5% of founders with capital and embedded operational support, driving 3x faster growth through
+            hands-on execution.
+          </p>
+
+          <div className={s.links}>
+            <Link href="/contacts">Pitch your startup</Link>
+            <Link href="/portfolio">Portfolio</Link>
+          </div>
+        </div>
+      </div>
+
+      <div className={s.bottomPart}>
+        <div className="container">
+          <div className={s.companies}>
+            <img src="/img/hero-companies/comp1.svg" alt=""/>
+            <img src="/img/hero-companies/comp2.svg" alt=""/>
+            <img src="/img/hero-companies/comp3.svg" alt=""/>
+            <img src="/img/hero-companies/comp4.svg" alt=""/>
+            <img src="/img/hero-companies/comp5.svg" alt=""/>
+            <img src="/img/hero-companies/comp6.svg" alt=""/>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  )
+    ;
+};
+
+export default Hero;
