@@ -43,7 +43,6 @@ const Companies = () => {
           <h2 className={s.title}>The companies we believe in</h2>
           <div className={s.sliderButtons}>
             <button
-              className={s.prevButton}
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +51,6 @@ const Companies = () => {
               </svg>
             </button>
             <button
-              className={s.nextButton}
               onClick={() => swiperRef.current?.slideNext()}
             >
               <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +94,6 @@ const Companies = () => {
             portfolioCardsData.map((slide, i) => (
               <SwiperSlide className={s.slide} style={{backgroundImage: `url(/img/portfolioItems/${slide.img})`}}>
                 <div className={s.innerBlock}>
-                  <div className={s.cat}>{slide.category}</div>
 
                   <div className={s.cardTitle}>
                     {slide.title}

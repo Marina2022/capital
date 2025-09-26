@@ -69,7 +69,7 @@
   overflow: visible;
 
   @include m {
-    overflow: hidden; /* скрываем всё, что выходит за пределы контейнера */
+    overflow: hidden;
     width: calc(100vw - 40px);
     margin-inline: 20px;
   }

@@ -107,3 +107,22 @@ export const approachData = [
   }
 ]
 
+
+
+export const investmentSlider = [
+  {
+    title: 'Artificial Intelligence',
+    text: 'Vertical SaaS, workflow automation, decisioning systems, and productivity platforms with defensible data moats.',
+    iconUrl: '/img/investments-slider-icons/icon1.svg',
+  },
+  {
+    title: 'Blockchain',
+    text: 'DeFi protocols, tokenization platforms, prediction markets, and foundational blockchain infrastructure.',
+    iconUrl: '/img/investments-slider-icons/icon2.svg',
+  },
+  {
+    title: 'Digital Lifestyle',
+    text: 'Gaming, creator economies, and passion-driven platforms that merge community with monetization.',
+    iconUrl: '/img/investments-slider-icons/icon3.svg',
+  }
+]
