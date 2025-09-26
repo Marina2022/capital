@@ -12,11 +12,21 @@ export default function AccordionItem({item}) {
         className={s.header}
         onClick={() => setOpen(!open)}
       >
-        <div className={s.numberWrapper}>
-          <span className={s.itemNumber}>{item.number}</span>
+
+        <div className={s.titleWrapper}>
+          <div className={s.numberWrapper}>
+            <span className={s.itemNumber}>{item.number}</span>
+          </div>
+
+          <span className={s.itemTitle}>{item.title}</span>
+
         </div>
 
-        <span className={s.itemTitle}>{item.title}</span>
+        <div className={`${s.content} ${open ? s.open : ''}`}>
+          <div className={s.text}>
+            {item.text}
+          </div>
+        </div>
 
         <span className={s.icon}>
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
@@ -29,11 +39,11 @@ export default function AccordionItem({item}) {
       </div>
 
       {/* сюда переносим модификатор открытого состояния */}
-      <div className={`${s.content} ${open ? s.open : ''}`}>
-        <div className={s.text}>
-          {item.text}
-        </div>
-      </div>
+      {/*<div className={`${s.content} ${open ? s.open : ''}`}>*/}
+      {/*  <div className={s.text}>*/}
+      {/*    {item.text}*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </li>
   );
 }
