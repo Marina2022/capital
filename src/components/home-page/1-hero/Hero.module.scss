@@ -1,12 +1,15 @@
 @use '@/assets/styles/mixins' as *;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   background: rgba(0, 0, 0, 1) url('/img/leo-bg.webp') no-repeat;
   background-size: contain;
   background-position: top -30px right;
   height: calc(100vh - 60px);
   width: 100%;
-  position: relative;
+
 
   @include lg {
     background-size: cover;
@@ -75,15 +78,21 @@
 
 .bottomPart {
   height: 90px;
-  position: absolute;
+  margin-top: auto ;
   width: 100%;
   bottom: 0;
   left: 0;
   color: white;
   background: black;
+  z-index: 2;
+  position: relative;
 
   @include lg {
-    display: none;
+   overflow-x: scroll;
+  }
+
+  @include lg {
+    height: 70px;
   }
 }
 
@@ -92,7 +101,7 @@
   height: 259px;
   width: 100%;
   position: absolute;
-  bottom: 90px;
+  bottom: 50px;
   left: 0;
   z-index: 2;
 }
@@ -109,6 +118,25 @@
 
   @include lg {
     max-width: 960px;
+  }
+
+  @include t {
+    padding: 0 20px;
+  }
+}
+
+.companiesContainer {
+  width: 100%;
+  max-width: 1580px;
+  margin: 0 auto;
+  height: 100%;
+
+  @include xl {
+    max-width: 1298px;
+  }
+
+  @include lg {
+    max-width: 100%;
   }
 
   @include t {
@@ -143,5 +171,15 @@
   height: 90px;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+  flex-shrink: 0;
   align-items: center;
+
+  @include lg {
+    height: 60px;
+
+    img {
+      transform: scale(0.8);
+    }
+  }
 }
