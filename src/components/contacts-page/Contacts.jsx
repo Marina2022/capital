@@ -1,14 +1,18 @@
-'use client';
+'use client'
+
+import Cleave from 'cleave.js/react'
 
 import s from './Contacts.module.scss';
 import {useForm} from 'react-hook-form';
+
 
 const Contacts = () => {
 
   const {
     register,
     handleSubmit,
-    formState: {errors}
+    formState: {errors},
+    setValue
   } = useForm();
 
 
@@ -21,7 +25,7 @@ const Contacts = () => {
   return (
     <section className={s.contacts}>
       <div className="container">
-        <form onSubmit={handleSubmit(onSubmit)} noValidate >
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className={s.topWrapper}>
             <div className={s.getInTouch}>
               <h1 className={s.mainTitle}>Get in touch</h1>
@@ -40,45 +44,75 @@ const Contacts = () => {
             <div className={s.formContentWrapper}>
               <div className={s.formContent}>
                 <div className={s.inputs}>
-                  <input
-                    {...register('name', {required: 'Enter your name'})}
-                    placeholder="Full Name"
-                    className={s.input}
-                  />
 
-                  <input
-                    {...register('email', {
-                      required: 'Enter your email',
-                      pattern: {
-                        value: /^\S+@\S+\.\S+$/,
-                        message: 'Enter a valid email address'
-                      }
-                    })}
-                    placeholder="Enter your email"
-                    className={s.input}
-                  />
+                  <div className={s.inputWrapper}>
+                    <input
+                      {...register('name', {required: 'Enter your name'})}
+                      placeholder="Full Name"
+                      className={s.input}
+                    />
+                    {errors.name && (
+                      <p className={s.error}>{errors.name.message}</p>
+                    )}
+                  </div>
+
+                  <div className={s.inputWrapper}>
+                    <input
+                      {...register('email', {
+                        required: 'Enter your email',
+                        pattern: {
+                          value: /^\S+@\S+\.\S+$/,
+                          message: 'Enter a valid email address'
+                        }
+                      })}
+                      placeholder="Enter your email"
+                      className={s.input}
+                    />
+                    {errors.email && (
+                      <p className={s.error}>{errors.email.message}</p>
+                    )}
+                  </div>
                 </div>
 
                 <div className={s.inputs}>
-                  <input
-                    {...register('phone', {required: 'Enter your phone number'})}
-                    placeholder="Enter your phone"
-                    className={s.input}
-                  />
+
+                  <div className={s.inputWrapper}>
+                    <Cleave
+                      placeholder="Enter your phone"
+                      className={s.input}
+                      options={{
+                        prefix: '+',
+                        blocks: [2, 3, 3, 4],   // +X XXX XXX XXXX
+                        delimiters: [' ', ' ', ' '],
+                        numericOnly: true,
+                      }}
+                      {...register('phone', {required: 'Enter your phone number'})}
+                      onChange={(e) => setValue('phone', e.target.value)}
+                    />
+
+                    {errors.phone && (
+                      <p className={s.error}>{errors.phone.message}</p>
+                    )}
+                  </div>
 
 
-                  <input
-                    {...register('company', {})}
-                    placeholder="Company"
-                    className={s.input}
-                  />
+                  <div className={s.inputWrapper}>
+                    <input
+                      {...register('company', {})}
+                      placeholder="Company"
+                      className={s.input}
+                    />
+                  </div>
                 </div>
 
                 <textarea
-                  {...register('message', {})}
+                  {...register('message', {required: 'Enter your message'})}
                   placeholder="Type your message here..."
                   className={s.message}
                 />
+                {errors.message && (
+                  <p className={s.error}>{errors.message.message}</p>
+                )}
               </div>
             </div>
           </div>

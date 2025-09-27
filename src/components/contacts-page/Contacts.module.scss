@@ -206,6 +206,7 @@
 }
 
 .input {
+  width: 100%;
   border: none;
   border-bottom: 1px solid var(--title-color);
   height: 48px;
@@ -239,6 +240,7 @@
   height: 200px;
   font-size: 16px;
   font-family: Onest;
+  resize: none;
 
   @include m {
     height: 180px;
@@ -262,3 +264,8 @@
   }
 }
 
+.error {
+  color: red;
+  margin-block: 4px;
+  font-size: 12px;
+}
