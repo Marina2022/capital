@@ -95,6 +95,11 @@ const Companies = () => {
               <SwiperSlide className={s.slide} style={{backgroundImage: `url(/img/portfolioItems/${slide.img})`}}>
                 <div className={s.innerBlock}>
 
+
+                  <div className={s.cardCat}>
+                    {slide.category}
+                  </div>
+
                   <div className={s.cardTitle}>
                     {slide.title}
                   </div>

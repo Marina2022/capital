@@ -1,11 +1,9 @@
 import React from 'react';
+import Contacts from "@/components/contacts-page/Contacts";
 
 const Page = () => {
   return (
-    <div>
-      contacts
-
-    </div>
+    <Contacts />
   );
 };
 

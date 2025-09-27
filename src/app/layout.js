@@ -3,6 +3,7 @@ import "./globals.scss";
 
 import {Onest} from 'next/font/google'
 import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
 
 const onest = Onest({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({children}) {
     <body className={onest.className}>
       <Header/>
       {children}
+      <Footer />
     </body>
     </html>
   );

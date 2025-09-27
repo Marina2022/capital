@@ -3,7 +3,7 @@
 .hero {
   background: rgba(0, 0, 0, 1) url('/img/leo-bg.webp') no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: top -30px right;
   height: calc(100vh - 60px);
   width: 100%;
   position: relative;
@@ -99,7 +99,7 @@
 
 .heroContainer {
   width: 100%;
-  max-width: 1640px;
+  max-width: 1580px;
   margin: 0 auto;
   height: 100%;
 
